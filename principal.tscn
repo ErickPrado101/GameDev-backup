@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://player.tscn" id="2_m7tbw"]
 
 [node name="principal" type="Node2D" unique_id=1396821284]
-position = Vector2(-61, 64)
 
 [node name="background_groundcover" parent="." unique_id=1883666143 instance=ExtResource("1_tr6oq")]
 
@@ -14,7 +13,3 @@ position = Vector2(132, 100)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1233403087]
 position = Vector2(134, 103)
 zoom = Vector2(3, 3)
-
-[node name="floorbody2D" type="StaticBody2D" parent="." unique_id=891856430]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floorbody2D" unique_id=1042065847]
