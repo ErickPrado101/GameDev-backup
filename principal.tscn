@@ -2,6 +2,60 @@
 
 [ext_resource type="PackedScene" uid="uid://cny81pyydupxh" path="res://background_groundcover.tscn" id="1_tr6oq"]
 [ext_resource type="PackedScene" uid="uid://dsbgeqekmaw6j" path="res://player.tscn" id="2_m7tbw"]
+[ext_resource type="Texture2D" uid="uid://wneiiolyn7ou" path="res://Crop_Spritesheet.png" id="3_rrtif"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cuts"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emcp4"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep5lw"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpj0s"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwsrf"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlig8"]
+atlas = ExtResource("3_rrtif")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrbya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cuts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emcp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep5lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpj0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwsrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlig8")
+}],
+"loop": true,
+"name": &"tomate",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ommbi"]
+size = Vector2(14, 15)
 
 [node name="principal" type="Node2D" unique_id=1396821284]
 
@@ -10,6 +64,138 @@
 [node name="player" parent="background_groundcover" unique_id=1086166672 instance=ExtResource("2_m7tbw")]
 position = Vector2(132, 100)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1233403087]
-position = Vector2(134, 103)
-zoom = Vector2(3, 3)
+[node name="tomate" type="Area2D" parent="background_groundcover" unique_id=52568093]
+position = Vector2(635, 292)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate" unique_id=280362750]
+position = Vector2(-91, -58)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate" unique_id=266581937]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate2" type="Area2D" parent="background_groundcover" unique_id=1964614925]
+position = Vector2(634, 327)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate2" unique_id=2023641525]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate2" unique_id=1966741831]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate3" type="Area2D" parent="background_groundcover" unique_id=1081016063]
+position = Vector2(635, 356)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate3" unique_id=284728991]
+position = Vector2(-91, -58)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate3" unique_id=1838642061]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate4" type="Area2D" parent="background_groundcover" unique_id=80340954]
+position = Vector2(634, 391)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate4" unique_id=2006850162]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate4" unique_id=863669579]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate5" type="Area2D" parent="background_groundcover" unique_id=1359156741]
+position = Vector2(634, 423)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate5" unique_id=684921363]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate5" unique_id=611494593]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate6" type="Area2D" parent="background_groundcover" unique_id=1450756765]
+position = Vector2(667, 292)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate6" unique_id=1013086523]
+position = Vector2(-91, -58)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate6" unique_id=1132043736]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate7" type="Area2D" parent="background_groundcover" unique_id=346351776]
+position = Vector2(666, 327)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate7" unique_id=67563816]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate7" unique_id=571620732]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate8" type="Area2D" parent="background_groundcover" unique_id=609158579]
+position = Vector2(667, 356)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate8" unique_id=301690573]
+position = Vector2(-91, -58)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate8" unique_id=1032261329]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate9" type="Area2D" parent="background_groundcover" unique_id=864879810]
+position = Vector2(666, 391)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate9" unique_id=1636452530]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate9" unique_id=777177667]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
+
+[node name="tomate10" type="Area2D" parent="background_groundcover" unique_id=1795221174]
+position = Vector2(666, 423)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="background_groundcover/tomate10" unique_id=6138066]
+position = Vector2(-90, -61)
+sprite_frames = SubResource("SpriteFrames_xrbya")
+animation = &"tomate"
+frame = 2
+frame_progress = 0.3799806
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background_groundcover/tomate10" unique_id=1003141985]
+position = Vector2(-91, -58.5)
+shape = SubResource("RectangleShape2D_ommbi")
