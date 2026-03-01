@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3c6hrcqmm0en"
-path="res://.godot/imported/portrait female.png-a00b1ffb746c2d4f887b8a573dbdfebd.ctex"
+uid="uid://c14775a6jcigm"
+path="res://.godot/imported/walk and idle.png-c586d29fcfd34ba9c94bf92ae9728569.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://portrait female.png"
-dest_files=["res://.godot/imported/portrait female.png-a00b1ffb746c2d4f887b8a573dbdfebd.ctex"]
+source_file="res://walk and idle.png"
+dest_files=["res://.godot/imported/walk and idle.png-c586d29fcfd34ba9c94bf92ae9728569.ctex"]
 
 [params]
 
