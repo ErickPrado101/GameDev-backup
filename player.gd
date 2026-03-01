@@ -9,32 +9,32 @@ func _ready():
 	target_position = global_position
 
 func _physics_process(delta: float) -> void:
-	
+
 
 	var input_vector = Vector2.ZERO
-	
+
 	input_vector.x = Input.get_axis("ui_left", "ui_right")
 	input_vector.y = Input.get_axis("ui_up", "ui_down")
-	
+
 	# Se apertar teclado, cancela movimento por clique
 	if input_vector != Vector2.ZERO:
 		moving_to_click = false
 		input_vector = input_vector.normalized()
 		velocity = input_vector * SPEED
-	
-	
+
+
 	elif moving_to_click:
 		var direction = (target_position - global_position)
-		
+
 		if direction.length() > 5:
 			velocity = direction.normalized() * SPEED
 		else:
 			moving_to_click = false
 			velocity = Vector2.ZERO
-	
+
 	else:
 		velocity = Vector2.ZERO
-	
+
 	move_and_slide()
 
 
